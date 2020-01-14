@@ -13,7 +13,7 @@
         </div>
       </div>
       <!--     Loop through the pages array to display each page number(still not working propertly)       -->
-      <div class="btn-group col-md-2 offset-md-5">
+      <!-- <div class="btn-group col-md-2 offset-md-5">
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary"
@@ -33,7 +33,7 @@
           v-if="page < pages.length"
           class="btn btn-sm btn-outline-secondary"
         >>></button>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -56,9 +56,14 @@ export default {
   methods: {
     async getPosts() {
       const res = await this.axios.get(`${this.baseURL}/courses`);
-      this.courses = res.data.courses;
-    },
-    setCourses() {
+      this.courses = res.data.data.items;
+      console.log(this.courses);
+
+      console.log("--------------------------------");
+      console.log(res.data);
+      console.log(this.courses[0].name);
+    }
+    /*  setCourses() {
       let numberOfPages = Math.ceil(this.courses.length / this.perPage);
       for (let i = 1; i <= numberOfPages; i++) {
         this.pages.push(i);
@@ -80,7 +85,7 @@ export default {
   computed: {
     displayedCourses: function() {
       return this.paginate(this.courses);
-    }
+    } */
   }
 };
 </script>
