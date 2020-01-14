@@ -26,6 +26,14 @@ Backend Development:<br />
 
 Install them all with the following two commands:
 
+**To get a fastest proyect configuration, you can place the terminal in the backend folder and run the next script**
+Production dependencies
+
+```
+npm install
+```
+
+Or you can do it manualy
 Production dependencies
 
 ```
