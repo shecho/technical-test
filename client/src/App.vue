@@ -2,7 +2,7 @@
   <div>
     <div class="container p-4">
       <div class="row">
-        <div class="col-md-4" v-for="course in displayed" :key="course._id">
+        <div class="col-md-4" v-for="course in courses" :key="course._id">
           <div class="card mb-2 box-shadow post-cards">
             <img v-bind:src="course.imageURL" class="card-img-top" />
             <div class="card-body">
@@ -57,11 +57,11 @@ export default {
     async getPosts() {
       const res = await this.axios.get(`${this.baseURL}/courses`);
       this.courses = res.data.data.items;
-      console.log(this.courses);
+      /* console.log(this.courses);
 
       console.log("--------------------------------");
       console.log(res.data);
-      console.log(this.courses[0].name);
+      console.log(this.courses[0].name); */
     }
     /*  setCourses() {
       let numberOfPages = Math.ceil(this.courses.length / this.perPage);
