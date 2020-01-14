@@ -46,7 +46,8 @@ export default {
       baseURL: "http://localhost:3000",
       page: 1,
       perPage: 10,
-      pages: []
+      pages: [],
+      displayed: []
     };
   },
   created() {
