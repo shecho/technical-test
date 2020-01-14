@@ -7,7 +7,9 @@
       class="btn btn-sm btn-outline-primary m-5"
     />
 
-    <button btn btn-sm btn-outline-primary v-on:click="filterCourses">Find</button>
+    <button btn btn-sm btn-outline-primary v-on:click="filterCourses">
+      Find
+    </button>
     <div class="container p-4">
       <div class="row">
         <div class="col-md-4" v-for="course in courses" :key="course._id">
@@ -20,7 +22,7 @@
           </div>
         </div>
       </div>
-      <!--     Loop through the pages array to display each page number(still not working propertly)       -->
+      <!--     Loop through the pages array to display each page number(still not working propertly.)       -->
       <!-- <div class="btn-group col-md-2 offset-md-5">
         <button
           type="button"
@@ -83,6 +85,8 @@ export default {
       console.log("testing");
       console.log(this.courses);
     }
+
+    /*NOT WORKING yet  */
     /*  setCourses() {
       let numberOfPages = Math.ceil(this.courses.length / this.perPage);
       for (let i = 1; i <= numberOfPages; i++) {
@@ -106,7 +110,10 @@ export default {
     displayedCourses: function() {
       return this.paginate(this.courses);
     } */
-    /*  computed: {
+    /*  
+  /* object error. Pendint to read documentation fo look for a fix */
+    /* 
+    computed: {
       courses() {
         return this.courses.filter(course => {
           return;
