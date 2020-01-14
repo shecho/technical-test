@@ -1,5 +1,13 @@
 <template>
   <div>
+    <input
+      type="text"
+      v-model="search"
+      placeholder="Search title.."
+      class="btn btn-sm btn-outline-primary m-5"
+    />
+
+    <button btn btn-sm btn-outline-primary v-on:click="filterCourses">Find</button>
     <div class="container p-4">
       <div class="row">
         <div class="col-md-4" v-for="course in courses" :key="course._id">
@@ -47,14 +55,16 @@ export default {
       page: 1,
       perPage: 10,
       pages: [],
-      displayed: []
+      displayed: [],
+      search: ""
     };
   },
   created() {
-    this.getPosts();
+    this.getCourses();
+    this.filterCourses();
   },
   methods: {
-    async getPosts() {
+    async getCourses() {
       const res = await this.axios.get(`${this.baseURL}/courses`);
       this.courses = res.data.data.items;
       /* console.log(this.courses);
@@ -62,6 +72,16 @@ export default {
       console.log("--------------------------------");
       console.log(res.data);
       console.log(this.courses[0].name); */
+    },
+    filterCourses() {
+      this.courses = [];
+      /* console.log("is working" + this.search); */
+      this.courses = this.courses.filter(course => {
+        return course.name.toLowerCase().includes(this.search.toLowerCase());
+        /* this.courses.push(object(course)); */
+      });
+      console.log("testing");
+      console.log(this.courses);
     }
     /*  setCourses() {
       let numberOfPages = Math.ceil(this.courses.length / this.perPage);
@@ -85,6 +105,14 @@ export default {
   computed: {
     displayedCourses: function() {
       return this.paginate(this.courses);
+    } */
+    /*  computed: {
+      courses() {
+        return this.courses.filter(course => {
+          return;
+          course.name.toLowerCase().includes(this.search.toLowerCase());
+        });
+      }
     } */
   }
 };

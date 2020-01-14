@@ -24,16 +24,16 @@ Backend Development:<br />
 "jest": "^24.9.0",
 "nodemon": "^2.0.2"
 
-Install them all with the following two commands:
+Install them all with the following commands:
 
-**To get a fastest proyect configuration, you can place the terminal in the backend folder and run the next script**
-Production dependencies
+**To get a fastest proyect configuration, you can place the terminal in the backend folder and run the next script (just work if you got the package.json inside the folder )**
 
 ```
 npm install
 ```
 
-Or you can do it manualy
+Or you can do it manualy install the dependencies like this:
+
 Production dependencies
 
 ```
