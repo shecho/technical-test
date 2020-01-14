@@ -33,7 +33,7 @@ module.exports = app => {
     }
   });
 
-  // Filtered by name
+  // Filtered by name. Not used
   router
     .route("/course/:name")
     .get(async (req, res) => {
