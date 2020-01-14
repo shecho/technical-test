@@ -1,4 +1,4 @@
-# Technical Test
+# Technical Test Backend
 
 Mission acepted sir.
 
@@ -26,7 +26,7 @@ Backend Development:<br />
 
 Install them all with the following commands:
 
-**To get a fastest proyect configuration, you can place the terminal in the backend folder and run the next script (just work if you got the package.json inside the folder )**
+**To get a faster proyect configuration, you can place the terminal in the backend folder and run the next script (just work if you got the package.json inside the folder )**
 
 ```
 npm install
@@ -47,6 +47,12 @@ npm install -D nodemon jest
 ```
 
 ### Installing
+
+This project also uses MongoDB, so make sure is installed and running as a service.
+
+```
+mongod
+```
 
 To run a development environment run the next scripts:
 
