@@ -1,6 +1,6 @@
 # Technical Test Frontend
 
-Mission acepted sir.
+Mission accepted sir.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ To get a faster project configuration, you can place the terminal in the Client 
 npm install
 ```
 
-Or you can istall manually this dependencies:
+Or you can install manually this dependencies:
 
 Frontend dependencies:
 
@@ -23,7 +23,7 @@ Frontend dependencies:
 "vue-axios": "^2.1.5"
 ```
 
-Frontend dev dependencies (instelled by VUE):
+Frontend dev dependencies (installed by VUE):
 
 ```
 "@vue/cli-plugin-babel": "^4.1.0",
@@ -60,4 +60,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 - How to "hate" JS after loving it and its frameworks
-- I felt I didn't do a great job and that it cuold be better, but I feel really happy anyways. I really enjoyed and learned a lot.
+- I felt I didn't do a great job and that it could be better, but I feel really happy anyways. I really enjoyed and learned a lot.

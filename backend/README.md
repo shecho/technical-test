@@ -1,6 +1,13 @@
+Mission accepted sir.
+
+## Getting Started
+
+In this project you'll find two different folders. Backend and Client folders.
+If you want to run the project go to the README.md file inside each folder, you can find detailed instructions going to backend first.
+
 # Technical Test Backend
 
-Mission acepted sir.
+Mission accepted sir.
 
 ## Getting Started
 
@@ -26,13 +33,13 @@ Backend Development:<br />
 
 Install them all with the following commands:
 
-**To get a faster proyect configuration, you can place the terminal in the backend folder and run the next script (just work if you got the package.json inside the folder )**
+**To get a faster project configuration, you can place the terminal in the backend folder and run the next script (just work if you got the package.json inside the folder )**
 
 ```
 npm install
 ```
 
-Or you can do it manualy install the dependencies like this:
+Or you can do it manually install the dependencies like this:
 
 Production dependencies
 
