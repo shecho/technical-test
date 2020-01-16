@@ -14,7 +14,7 @@ module.exports = app => {
       )
     );
 
-  // All courses
+  // All courses(working)
   router.route("/courses").get(async (req, res) => {
     const response = await fetch(
       `https://test.mytablemesa.com/api/courses?orderBy=popularity+desc&expand=provider&limit=24&profession=&subjectAreaCode=&state=&provider=&name=`
@@ -33,7 +33,7 @@ module.exports = app => {
     }
   });
 
-  // Filtered by name. Not used
+  // Filtered by name. (Not used yet. Cheking integration with the front
   router
     .route("/course/:name")
     .get(async (req, res) => {
