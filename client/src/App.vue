@@ -7,12 +7,10 @@
       class="btn btn-sm btn-outline-primary m-5"
     />
 
-    <button btn btn-sm btn-outline-primary v-on:click="filterCourses">
-      Find
-    </button>
+    <!-- <button btn btn-sm btn-outline-primary v-on:click="filterCourses">Find</button> -->
     <div class="container p-4">
       <div class="row">
-        <div class="col-md-4" v-for="course in courses" :key="course._id">
+        <div class="col-md-4" v-for="course in filteredCourses " :key="course._id">
           <div class="card mb-2 box-shadow post-cards">
             <img v-bind:src="course.imageURL" class="card-img-top" />
             <div class="card-body">
@@ -63,7 +61,7 @@ export default {
   },
   created() {
     this.getCourses();
-    this.filterCourses();
+    /*  this.filterCourses(); */
   },
   methods: {
     async getCourses() {
@@ -75,16 +73,16 @@ export default {
       console.log(res.data);
       console.log(this.courses[0].name); */
     },
-    filterCourses() {
-      this.courses = [];
-      /* console.log("is working" + this.search); */
-      this.courses = this.courses.filter(course => {
-        return course.name.toLowerCase().includes(this.search.toLowerCase());
-        /* this.courses.push(object(course)); */
-      });
+    /*  filterCourses() {
+      this.courses = []; */
+    /* console.log("is working" + this.search); */
+    /* this.courses = this.courses.filter(course => {
+        return course.name.toLowerCase().includes(this.search.toLowerCase()); */
+    /* this.courses.push(object(course)); */
+    /*  });
       console.log("testing");
       console.log(this.courses);
-    }
+    } */
 
     /*NOT WORKING yet  */
     /*  setCourses() {
@@ -104,23 +102,22 @@ export default {
   watch: {
     courses() {
       this.setCourses();
-    }
+    } 
   },
   computed: {
     displayedCourses: function() {
       return this.paginate(this.courses);
     } */
     /*  
-  /* object error. Pendint to read documentation fo look for a fix */
-    /* 
+  /* object error. pending  to read documentation to look for a fix */
+
     computed: {
-      courses() {
+      filteredCourses: function() {
         return this.courses.filter(course => {
-          return;
-          course.name.toLowerCase().includes(this.search.toLowerCase());
+        /*   return course.name.toLowerCase().includes(this.search.toLowerCase()); */
         });
       }
-    } */
+    }
   }
 };
 </script>
