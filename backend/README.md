@@ -1,4 +1,3 @@
-Mission accepted sir.
 
 ## Getting Started
 
